@@ -36,6 +36,7 @@ function svg(fileSource, exportFilePath) {
     for (let i = 0; i < fileSource.length; i++) {
         searchFile(fileSource[i]);
     }
+    readFiles.sort();
     var eachFolder = function() {
         for (let i = 0; i < readFiles.length; i++) {
             var str = ("" + FS.readFileSync(readFiles[i].absPath))
